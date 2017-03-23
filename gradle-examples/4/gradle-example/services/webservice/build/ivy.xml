@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="org.jfrog.example.gradle" module="webservice" revision="1.0-SNAPSHOT" status="Integration" publication="20151217105215">
+  <info organisation="org.jfrog.example.gradle" module="webservice" revision="1.0-SNAPSHOT" status="Integration" publication="20170323155335">
     <description/>
   </info>
   <configurations>

@@ -5,11 +5,10 @@ gradle.projectsLoaded {
 			maven{
 			//url "http://repo.jfrog.org/artifactory/gradle"
 			//url "http://localhost:8081/artifactory/gradle"
-			  url "http://localhost:8080/artifactory/gradle-snapshot-local"
+			  url "http://172.29.0.1:18081/artifactory/gradle-remote"
 			}
-			//mavenLocal()
             dependencies {
-                classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '2.2.4')
+                classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '4+')
             }
          }       
 	   }

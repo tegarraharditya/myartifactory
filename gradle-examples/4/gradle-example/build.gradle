@@ -22,6 +22,9 @@ buildscript {
     }
   }
 }
+repositories {
+  jcenter()
+}
 
 allprojects {
   apply plugin: 'com.jfrog.artifactory'
@@ -73,10 +76,10 @@ configurations {
 }
 
 artifactory {
-  contextUrl = 'http://localhost:8081/artifactory'
+  contextUrl = 'http://172.29.0.1:18081/artifactory'
   publish {
     repository {
-      repoKey = 'libs-snapshot-local' // The Artifactory repository key to publish to
+      repoKey = 'gradle-dev' // The Artifactory repository key to publish to
       username = "${artifactory_user}" // The publisher user name
       password = "${artifactory_password}" // The publisher password
       // This is an optional section for configuring Ivy publication (when publishIvy = true).
@@ -113,10 +116,10 @@ artifactory {
   }
   resolve {
     repository {
-      repoKey = 'jcenter' // The Artifactory (preferably virtual) repository key to resolve from
+      repoKey = 'gradle-remote' // The Artifactory (preferably virtual) repository key to resolve from
       username = "${artifactory_user}" // Optional resolver user name (leave out to use anonymous resolution)
       password = "${artifactory_password}" // The resolver password
-      maven = true     
+      maven = true
     }
   }
 }
